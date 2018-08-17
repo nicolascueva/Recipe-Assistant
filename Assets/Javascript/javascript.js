@@ -15,7 +15,7 @@ $(document).ready(function () {
     //AJAX query & GET method for BigOven API
     var searchBigOven = function (queryURL) {
         apikeyBigOven = '&api_key=Ifu76FTQAzDd6CpFyGgVK9Y8IJ7MW196';
-        var queryURL = 'https://api2.bigoven.com/recipes?' + apikeyBigOven;
+        var queryURL;
 
         //query search is defined based on the button on(clicks)
         if ($('#vegan').on('click', function () {
@@ -30,6 +30,8 @@ $(document).ready(function () {
         } else if ($('#dairyFree').on('click', function () {
         }) === true) {
             queryURL = 'https://api2.bigoven.com/recipes?' + dairyFree + searchTerms + apikeyBigOven;
+        } else {
+            queryURL = 'https://api2.bigoven.com/recipes?' + apikeyBigOven;
         }
 
         $.ajax({
