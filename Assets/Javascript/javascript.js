@@ -6,6 +6,8 @@ $(document).ready(function () {
     var userChoice1; //set value to on(click) button selection
     var userChoice2; //set value to on(click) button selection
     var userChoice3; //set value to on(click) button selection
+    //Need to remove value on queryurl if button is deselected!
+
     var vegan = 'vgn=1';
     var vegetarian = 'vtn=1';
     var glutenFree = 'glf=1';
@@ -47,9 +49,21 @@ $(document).ready(function () {
             url: randomRecipe,
             method: "GET"
         }).then(function (response) {
-            console.log(response);
+            console.log(response); //Test logs to verify information displays correctly
+            console.log(response.Title); //Test logs to verify information displays correctly
+            console.log(response.Ingredients); //Test logs to verify information displays correctly
+            console.log(response.Instructions); //Test logs to verify information displays correctly
+
+            //Display random recipe on screen
+            $('#randomRecipe').append(response.Title);
+            $('#randomIngredients').append(response.Ingredients);
+            $('#randomDescription').append(response.Description);
+            $('#randomInstructions').append(response.Instructions);
         });
     }
+
+    //Display the random recipe of the day on sceen
+    randomRecipe();
 
     $('#filterSubmit').on('click', function () {
         searchBigOven();
