@@ -59,27 +59,86 @@
               <p class="center">
                 <label>
                   <input class="with-gap center" name="group1" type="radio" />
-                  <span>Primal</span>
+                  <span id="vegan">Vegan</span>
                 </label>
               </p>
               <p class="center">
                 <label class="center">
                   <input class="with-gap center" name="group1" type="radio" />
-                  <span>Vegetarian</span>
+                  <span id="vegetarian">Vegetarian</span>
                 </label>
               </p>
               <p class="center">
                 <label>
                   <input class="with-gap center" name="group1" type="radio" />
-                  <span>Vegan</span>
+                  <span id="gluten-free">Glutin Free</span>
                 </label>
               </p>
-              <button id="filterSubmit" class="btn waves-effect waves-light" type="submit" name="action">Submit
-                <i class="material-icons right"></i>
-              </button>
+              <p class="center">
+                <label>
+                  <input class="with-gap center" name="group1" type="radio" />
+                  <span id="dairy-free">Dairy Free</span>
+                </label>
+              </p>
+
             </form>
             <br>
-            <form action="#" class="center light">
+            <h5 class="center">Whats in your Fridge</h5>
+            <div class="input-field col s12 center">
+              <select class="icons">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="" data-icon="images/sample-1.jpg">example 1</option>
+                <option value="" data-icon="images/office.jpg">example 2</option>
+                <option value="" data-icon="images/yuna.jpg">example 3</option>
+                <option value="" data-icon="images/sample-1.jpg">example 1</option>
+                <option value="" data-icon="images/office.jpg">example 2</option>
+                <option value="" data-icon="images/yuna.jpg">example 3</option>
+                <option value="" data-icon="images/sample-1.jpg">example 1</option>
+                <option value="" data-icon="images/office.jpg">example 2</option>
+                <option value="" data-icon="images/yuna.jpg">example 3</option>
+                <option value="" data-icon="images/sample-1.jpg">example 1</option>
+              </select>
+              <label></label>
+            </div>
+            <div class="input-field col s12 center">
+              <select class="icons">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="" data-icon="images/sample-1.jpg">example 1</option>
+                <option value="" data-icon="images/office.jpg">example 2</option>
+                <option value="" data-icon="images/yuna.jpg">example 3</option>
+                <option value="" data-icon="images/sample-1.jpg">example 1</option>
+                <option value="" data-icon="images/office.jpg">example 2</option>
+                <option value="" data-icon="images/yuna.jpg">example 3</option>
+                <option value="" data-icon="images/sample-1.jpg">example 1</option>
+                <option value="" data-icon="images/office.jpg">example 2</option>
+                <option value="" data-icon="images/yuna.jpg">example 3</option>
+                <option value="" data-icon="images/sample-1.jpg">example 1</option>
+              </select>
+              <label></label>
+            </div>
+            <div class="input-field col s12 center">
+              <select class="icons">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="" data-icon="images/sample-1.jpg">example 1</option>
+                <option value="" data-icon="images/office.jpg">example 2</option>
+                <option value="" data-icon="images/yuna.jpg">example 3</option>
+                <option value="" data-icon="images/sample-1.jpg">example 1</option>
+                <option value="" data-icon="images/office.jpg">example 2</option>
+                <option value="" data-icon="images/yuna.jpg">example 3</option>
+                <option value="" data-icon="images/sample-1.jpg">example 1</option>
+                <option value="" data-icon="images/office.jpg">example 2</option>
+                <option value="" data-icon="images/yuna.jpg">example 3</option>
+                <option value="" data-icon="images/sample-1.jpg">example 1</option>
+              </select>
+              <label></label>
+            </div>
+            <br><br>
+            <div class=" row center">
+              <button id="submit" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right"></i>
+              </button>
+            </div>
+            <!--<form action="#" class="center light">
               <h5 class="center">What do you have in your fridge?
               </h5>
               <p class="center">
@@ -109,7 +168,7 @@
               <button id="ingredientsSubmit" class="btn waves-effect waves-light" type="submit" name="action">Submit
                 <i class="material-icons right"></i>
               </button>
-            </form>
+            </form>-->
           </div>
         </div>
 
@@ -118,11 +177,12 @@
             <h2 class="center brown-text"><i class="material-icons">group</i></h2>
             <h5 class="center">Recipe of the day</h5>
 
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework
-              that incorporates components and animations that provide more feedback to users. Additionally, a single underlying
-              responsive system across all platforms allow for a more unified user experience.</p>
+            <div class="light" id="randomIngredients">
+            </div>
+            <div id="randomInstructions"></div>
+            <div id="randomImage"></div>
             <br><br>
-            <div class="video-container ">
+            <div class="video-container">
               <iframe width="560 " height="315 " src="https://www.youtube.com/embed/KgyMbCjPJ9g " frameborder="0
                             " allow="autoplay; encrypted-media " allowfullscreen></iframe>
             </div>
@@ -192,7 +252,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src="food5.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
   <footer class="page-footer teal">
