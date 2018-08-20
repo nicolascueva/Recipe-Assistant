@@ -67,6 +67,7 @@ $(document).ready(function () {
 
     $('#filterSubmit').on('click', function () {
         searchBigOven();
+        console.log("hey there");
     });
 
     $('#ingredientsSubmit').on('click', function () {
