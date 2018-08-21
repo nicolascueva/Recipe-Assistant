@@ -13,42 +13,12 @@ $(document).ready(function () {
     };
     firebase.initializeApp(config);
 
+    const BIG_OVEN_KEY = 'Ifu76FTQAzDd6CpFyGgVK9Y8IJ7MW196';
+    
     //When one of these buttons is selected, store the value into a variable to be used as a search parameter for the Big Oven API
-    var userChoice1; //set value to radio button selection
-    var userChoice2; //set value to radio button selection
-    var userChoice3; //set value to radio button selection
-    //Need to remove value on queryurl if button is deselected!
-
-    var vegan = 'vgn=1';
-    var vegetarian = 'vtn=1';
-    var glutenFree = 'glf=1';
-    var dairyFree = 'dyf=1';
-    var searchTerms = 'include_ing=' + userChoice1, userChoice2, userChoice3;
-
-    apikeyBigOven = '&api_key=Ifu76FTQAzDd6CpFyGgVK9Y8IJ7MW196';
-    var queryURL = 'https://api2.bigoven.com/recipes?' + apikeyBigOven;
-
-    // query search is defined based on the button on(clicks)
-    $('#vegan').on('click', function () {
-        queryURL = 'https://api2.bigoven.com/recipes?' + vegan + apikeyBigOven;
-        console.log(queryURL);
-    })
-    $('#vegetarian').on('click', function () {
-        queryURL = 'https://api2.bigoven.com/recipes?' + vegetarian + apikeyBigOven;
-        console.log(queryURL);
-    })
-    $('#glutenFree').on('click', function () {
-        queryURL = 'https://api2.bigoven.com/recipes?' + glutenFree + apikeyBigOven;
-        console.log(queryURL);
-    })
-    $('#dairyFree').on('click', function () {
-        queryURL = 'https://api2.bigoven.com/recipes?' + dairyFree + apikeyBigOven;
-        console.log(queryURL);
-    })
 
     //AJAX query & GET method for BigOven API
-    var searchBigOven = function () {
-
+    var searchBigOven = function (queryURL) {
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -87,10 +57,22 @@ $(document).ready(function () {
     randomRecipe();
 
     $('#submit').on('click', function () {
-        searchBigOven();
+        //stores value of ingredients for use in queryURL
+        var userChoice1 =  $( "#userChoice1 option:selected" ).text();
+        var userChoice2 =  $( "#userChoice2 option:selected" ).text();
+        var userChoice3 =  $( "#userChoice3 option:selected" ).text();
+        var searchTerms = userChoice1 + ',' +  userChoice2 + ',' + userChoice3;
+        
+        var queryURL = 'https://api2.bigoven.com/recipes?' + 
+            'api_key=' + BIG_OVEN_KEY + 
+            'include_ing' + searchTerms + 
+            'vgn=' + $("#vegan").is(":checked") ? '1' : '0' +
+            'vtn=' + $("#vegetarian").is(":checked") ? '1' : '0' +
+            'glf=' + $("#glutenFree").is(":checked") ? '1' : '0' +
+            'dyf=' + $("#dairyFree").is(":checked") ? '1' : '0';
+        searchBigOven(queryURL);
     });
 
 });
-
 
 // GitHub Contributors: andyxwood, nicolascueva, zachshult124
