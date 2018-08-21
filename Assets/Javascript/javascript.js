@@ -5,9 +5,9 @@ $(document).ready(function () {
     const BIG_OVEN_KEY = 'Ifu76FTQAzDd6CpFyGgVK9Y8IJ7MW196';
 
     //AJAX query & GET method for BigOven API
-    var searchBigOven = function (queryURL) {
+    var searchBigOven = function (bigOven_queryURL) {
         $.ajax({
-            url: queryURL,
+            url: bigOven_queryURL,
             method: "GET"
         }).then(function (response) {
             console.log(response);
@@ -25,14 +25,14 @@ $(document).ready(function () {
             $('#recipe5').text(recipeName5);
 
             var recipe1_url = response.Results[0].WebURL;
-            var recipe2_url = response.Results[0].WebURL;
-            var recipe3_url = response.Results[0].WebURL;
-            var recipe4_url = response.Results[0].WebURL;
-            var recipe5_url = response.Results[0].WebURL;
+            var recipe2_url = response.Results[1].WebURL;
+            var recipe3_url = response.Results[2].WebURL;
+            var recipe4_url = response.Results[3].WebURL;
+            var recipe5_url = response.Results[4].WebURL;
 
             //On recipe button click, take user to new tab 
             $('#recipe1').click(function () {
-                window.open(searchBigOven.recipe1_url);
+                window.open(recipe1_url);
             });
             $('#recipe2').click(function () {
                 window.open(recipe2_url);
@@ -77,7 +77,7 @@ $(document).ready(function () {
 
     $('#submit').on('click', function () {
 
-        //stores value of ingredients for use in queryURL
+        //stores value of ingredients for use in bigOven_queryURL
         var userChoice1 = $("#userChoice1 option:selected").text();
         var userChoice2 = $("#userChoice2 option:selected").text();
         var userChoice3 = $("#userChoice3 option:selected").text();
@@ -91,9 +91,9 @@ $(document).ready(function () {
         var glfValue = $("#glutenFree").is(":checked") ? '1' : '0'
         var dyfValue = $("#dairyFree").is(":checked") ? '1' : '0'
 
-        var queryURL = `http://api2.bigoven.com/recipes?include_ing=${searchTerms}&vgn=${vgnvalue}&vtn=${vtnValue}&glf=${glfValue}&dyf=${dyfValue}&api_key=${BIG_OVEN_KEY}`;
+        var bigOven_queryURL = `http://api2.bigoven.com/recipes?include_ing=${searchTerms}&vgn=${vgnvalue}&vtn=${vtnValue}&glf=${glfValue}&dyf=${dyfValue}&api_key=${BIG_OVEN_KEY}`;
 
-        searchBigOven(queryURL);
+        searchBigOven(bigOven_queryURL);
 
     });
 
