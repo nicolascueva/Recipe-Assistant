@@ -11,6 +11,34 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             console.log(response);
+            $('#recipe1').text(response.Results[0].Title);
+            $('#recipe2').text(response.Results[1].Title);
+            $('#recipe3').text(response.Results[2].Title);
+            $('#recipe4').text(response.Results[3].Title);
+            $('#recipe5').text(response.Results[4].Title);
+
+            var recipe1_url = response.Results[0].WebURL;
+            var recipe2_url = response.Results[0].WebURL;
+            var recipe3_url = response.Results[0].WebURL;
+            var recipe4_url = response.Results[0].WebURL;
+            var recipe5_url = response.Results[0].WebURL;
+
+            //On recipe button click, take user to new tab 
+            $('#recipe1').click(function () {
+                window.open(recipe1_url);
+            });
+            $('#recipe2').click(function () {
+                window.open(recipe2_url);
+            });
+            $('#recipe3').click(function () {
+                window.open(recipe3_url);
+            });
+            $('#recipe4').click(function () {
+                window.open(recipe4_url);
+            });
+            $('#recipe5').click(function () {
+                window.open(recipe5_url);
+            });
         });
     }
 
@@ -22,9 +50,6 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             console.log(response); //Test logs to verify information displays correctly
-            console.log(response.Title); //Test logs to verify information displays correctly
-            console.log(response.Ingredients); //Test logs to verify information displays correctly
-            console.log(response.Instructions); //Test logs to verify information displays correctly
 
             //Display random recipe on screen
             $('#randomRecipe').append(response.Title);
@@ -43,21 +68,27 @@ $(document).ready(function () {
     //Display the random recipe of the day on sceen
     randomRecipe();
 
+
     $('#submit').on('click', function () {
+
         //stores value of ingredients for use in queryURL
         var userChoice1 = $("#userChoice1 option:selected").text();
         var userChoice2 = $("#userChoice2 option:selected").text();
         var userChoice3 = $("#userChoice3 option:selected").text();
+        if (userChoice1 === 'Choose your option' && userChoice2 === 'Choose your option' && userChoice3 === 'Choose your option') {
+            userChoice1 = ''; userChoice2 = ''; userChoice3 = '';
+        }
         var searchTerms = userChoice1 + ',' + userChoice2 + ',' + userChoice3;
 
-        var queryURL = 'https://api2.bigoven.com/recipes?' +
-            'include_ing' + searchTerms +
-            'vgn=' + $("#vegan").is(":checked") ? '1' : '0' +
-                'vtn=' + $("#vegetarian").is(":checked") ? '1' : '0' +
-                    'glf=' + $("#glutenFree").is(":checked") ? '1' : '0' +
-                        'dyf=' + $("#dairyFree").is(":checked") ? '1' : '0' +
-                        'api_key=' + BIG_OVEN_KEY;
+        var vgnvalue = $("#vegan").is(":checked") ? '1' : '0';
+        var vtnValue = $("#vegetarian").is(":checked") ? '1' : '0'
+        var glfValue = $("#glutenFree").is(":checked") ? '1' : '0'
+        var dyfValue = $("#dairyFree").is(":checked") ? '1' : '0'
+
+        var queryURL = `http://api2.bigoven.com/recipes?include_ing=${searchTerms}&vgn=${vgnvalue}&vtn=${vtnValue}&glf=${glfValue}&dyf=${dyfValue}&api_key=${BIG_OVEN_KEY}`;
+
         searchBigOven(queryURL);
+
     });
 
 });
