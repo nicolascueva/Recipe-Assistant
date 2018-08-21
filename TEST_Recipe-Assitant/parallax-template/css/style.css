@@ -55,7 +55,26 @@ p {
 footer.page-footer {
   margin: 0;
 }
-
+/* Start of my own CSS overrides*/
 #submit{
   top:10px;
+}
+span{
+  font-weight: bold;
+}
+select{
+  color:#ff5252;
+  border:1px solid black;
+  
+}
+
+.titleBackground{
+  opacity: 0.9;
+}
+.titleHead{
+  font-weight: bold;
+  font-size: 100px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  
 }
