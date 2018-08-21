@@ -11,11 +11,18 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             console.log(response);
-            $('#recipe1').text(response.Results[0].Title);
-            $('#recipe2').text(response.Results[1].Title);
-            $('#recipe3').text(response.Results[2].Title);
-            $('#recipe4').text(response.Results[3].Title);
-            $('#recipe5').text(response.Results[4].Title);
+
+            var recipeName1 = response.Results[0].Title;
+            var recipeName2 = response.Results[1].Title;
+            var recipeName3 = response.Results[2].Title;
+            var recipeName4 = response.Results[3].Title;
+            var recipeName5 = response.Results[4].Title;
+
+            $('#recipe1').text(recipeName1);
+            $('#recipe2').text(recipeName2);
+            $('#recipe3').text(recipeName3);
+            $('#recipe4').text(recipeName4);
+            $('#recipe5').text(recipeName5);
 
             var recipe1_url = response.Results[0].WebURL;
             var recipe2_url = response.Results[0].WebURL;
@@ -25,7 +32,7 @@ $(document).ready(function () {
 
             //On recipe button click, take user to new tab 
             $('#recipe1').click(function () {
-                window.open(recipe1_url);
+                window.open(searchBigOven.recipe1_url);
             });
             $('#recipe2').click(function () {
                 window.open(recipe2_url);
@@ -67,7 +74,6 @@ $(document).ready(function () {
 
     //Display the random recipe of the day on sceen
     randomRecipe();
-
 
     $('#submit').on('click', function () {
 
