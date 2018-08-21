@@ -48,7 +48,7 @@
                 <label>
 
                   <input id="vegan" class="with-gap center" name="group1" type="radio" />
-                  <span class="red-text text-accent-2">Vegan</span>
+                  <span class="brown-text darken-1 filterSize">Vegan</span>
 
                 </label>
               </p>
@@ -56,21 +56,21 @@
                 <label class="center">
 
                   <input id="vegetarian" class="with-gap center" name="group1" type="radio" />
-                  <span class="red-text text-accent-2" id="vegetarian">Vegetarian</span>
+                  <span class="brown-text darken-1 filterSize" id="vegetarian">Vegetarian</span>
 
                 </label>
               </p>
               <p class="center">
                 <label>
                   <input id="glutenFree" class="with-gap center" name="group1" type="radio" />
-                  <span class="red-text text-accent-2" id="glutenFree">Glutin Free</span>
+                  <span class="brown-text darken-1 filterSize" id="glutenFree">Glutin Free</span>
 
                 </label>
               </p>
               <p class="center">
                 <label>
                   <input id="dairyFree" class="with-gap center" name="group1" type="radio" />
-                  <span class="red-text text-accent-2">Dairy Free</span>
+                  <span class="brown-text darken-1 filterSize">Dairy Free</span>
                 </label>
               </p>
             </form>
@@ -142,7 +142,7 @@
             <h6 id='randomRecipe' class='center'></h6>
             <br>
             <!-- <div class="light" id="randomDescription"></div> -->
-            <div id="randomIngredients">Ingredients:</div>
+            <div id="randomIngredients"></div>
             <!-- <div id="randomImage"></div> -->
             <br><br>
             <!--Youtube Box-->
@@ -157,15 +157,18 @@
           <div class="icon-block">
             <h2 class="center red-text accent-2"><i class="material-icons">collections</i></h2>
             <ul class="center">
-              <li><a id='recipe1' class="waves-effect waves-light btn-large red accent-2">Recipe 1</a></li>
+
+              <li><a class="waves-effect waves-light btn-large brown darken-1 recipeHeight">Recipe 1</a></li>
               <br>
-              <li><a id='recipe2' class="waves-effect waves-light btn-large red accent-2">Recipe 2</a></li>
+              <li><a class="waves-effect waves-light btn-large brown darken-1 recipeHeight">Recipe 2</a></li>
               <br>
-              <li><a id='recipe3' class="waves-effect waves-light btn-large red accent-2">Recipe 3</a></li>
+              <li><a class="waves-effect waves-light btn-large brown darken-1 recipeHeight">Recipe 3</a></li>
               <br>
-              <li><a id='recipe4' class="waves-effect waves-light btn-large red accent-2">Recipe 4</a></li>
+              <li><a class="waves-effect waves-light btn-large brown darken-1 recipeHeight">Recipe 4</a></li>
               <br>
-              <li><a id='recipe5' class="waves-effect waves-light btn-large red accent-2">Recipe 5</a></li>
+              <li><a class="waves-effect waves-light btn-large brown darken-1 recipeHeight">Recipe 5</a></li>
+              
+
             </ul>
 
 
@@ -187,7 +190,8 @@
     </div>
     <div class="parallax"><img src="food5.jpg" alt="Unsplashed background img 2"></div>
   </div>
-  <!--Row for chosen Recipe-->
+  <!-- Row for chosen recipe if we choose to append it to the page at a later date
+  
   <div class="container">
     <div class="section">
       <div class="row">
@@ -204,19 +208,9 @@
       </div>
 
     </div>
-  </div>
+  </div>-->
 
-  <!-- 3rd horizontal image-->
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
 
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="food5.jpg" alt="Unsplashed background img 3"></div>
-  </div>
   <!--Footer-->
   <footer class="page-footer red accent-1">
     <div class="container">
@@ -239,8 +233,8 @@
         </div>
       </div>
     </div>
-    <div class="footer-copyright red accent-2">
-      <div class="container">
+    <div class="footer-copyright white">
+      <div class="container black-text">
         Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
       </div>
     </div>

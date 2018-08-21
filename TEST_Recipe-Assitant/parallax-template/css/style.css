@@ -63,7 +63,8 @@ span{
   font-weight: bold;
 }
 select{
-  color:#ff5252;
+ /* color:#ff5252;*/
+ color:#6d4c41 ;
   border:1px solid black;
   
 }
@@ -73,8 +74,20 @@ select{
 }
 .titleHead{
   font-weight: bold;
-  font-size: 100px;
+  /*font-size: 100px;*/
+  font-size:7vw;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-  
+  -webkit-text-stroke-color: black; 
+}
+.filterSize{
+  font-size: 14px;
+}
+#randomRecipe{
+  font-weight: bold;
+}
+
+.recipeHeight{
+ /*height:80px;
+ width:300px;*/
+/* font-size:12px;*/
 }
