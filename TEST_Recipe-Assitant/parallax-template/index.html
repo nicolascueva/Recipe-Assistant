@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-  <title>Parallax Template - Materialize</title>
+  <title>Recipe Assistant</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -46,26 +46,31 @@
 
               <p class="center">
                 <label>
-                  <input class="with-gap center" name="group1" type="radio" />
-                  <span class="red-text text-accent-2" id="vegan">Vegan</span>
+
+                  <input id="vegan" class="with-gap center" name="group1" type="radio" />
+                  <span class="red-text text-accent-2">Vegan</span>
+
                 </label>
               </p>
               <p class="center">
                 <label class="center">
-                  <input class="with-gap center" name="group1" type="radio" />
+
+                  <input id="vegetarian" class="with-gap center" name="group1" type="radio" />
                   <span class="red-text text-accent-2" id="vegetarian">Vegetarian</span>
+
                 </label>
               </p>
               <p class="center">
                 <label>
-                  <input class="with-gap center" name="group1" type="radio" />
+                  <input id="glutenFree" class="with-gap center" name="group1" type="radio" />
                   <span class="red-text text-accent-2" id="glutenFree">Glutin Free</span>
+
                 </label>
               </p>
               <p class="center">
                 <label>
-                  <input class="with-gap center" name="group1" type="radio" />
-                  <span class="red-text text-accent-2" id="dairyFree">Dairy Free</span>
+                  <input id="dairyFree" class="with-gap center" name="group1" type="radio" />
+                  <span class="red-text text-accent-2">Dairy Free</span>
                 </label>
               </p>
             </form>
@@ -73,50 +78,50 @@
             <!-- Ingredient Selection-->
             <h5 class="center">What's in your Fridge</h5>
             <div class="input-field col s12 center">
+              <select id='userChoice1' class="icons">
+                <option value="1" disabled selected>Choose your option</option>
+                <option value="2" data-icon="images/sample-1.jpg">Chicken</option>
+                <option value="3" data-icon="images/office.jpg">Beef</option>
+                <option value="4" data-icon="images/yuna.jpg">Bread</option>
+                <option value="5" data-icon="images/sample-1.jpg">Rice</option>
+                <option value="6" data-icon="images/office.jpg">Pasta</option>
+                <option value="7" data-icon="images/yuna.jpg">Cheese</option>
+                <option value="8" data-icon="images/sample-1.jpg">Eggs</option>
+                <option value="9" data-icon="images/office.jpg">Milk</option>
+                <option value="10" data-icon="images/yuna.jpg">Fruit</option>
+                <option value="11" data-icon="images/sample-1.jpg">Vegetables</option>
+              </select>
+              <label></label>
+            </div>
+            <div id='userChoice2' class="input-field col s12 center">
               <select class="icons">
-                <option value="" disabled selected>Choose your option</option>
-                <option value="" data-icon="images/sample-1.jpg">example 1</option>
-                <option value="" data-icon="images/office.jpg">example 2</option>
-                <option value="" data-icon="images/yuna.jpg">example 3</option>
-                <option value="" data-icon="images/sample-1.jpg">example 1</option>
-                <option value="" data-icon="images/office.jpg">example 2</option>
-                <option value="" data-icon="images/yuna.jpg">example 3</option>
-                <option value="" data-icon="images/sample-1.jpg">example 1</option>
-                <option value="" data-icon="images/office.jpg">example 2</option>
-                <option value="" data-icon="images/yuna.jpg">example 3</option>
-                <option value="" data-icon="images/sample-1.jpg">example 1</option>
+                <option value="1" disabled selected>Choose your option</option>
+                <option value="2" data-icon="images/sample-1.jpg">Chicken</option>
+                <option value="3" data-icon="images/office.jpg">Beef</option>
+                <option value="4" data-icon="images/yuna.jpg">Bread</option>
+                <option value="5" data-icon="images/sample-1.jpg">Rice</option>
+                <option value="6" data-icon="images/office.jpg">Pasta</option>
+                <option value="7" data-icon="images/yuna.jpg">Cheese</option>
+                <option value="8" data-icon="images/sample-1.jpg">Eggs</option>
+                <option value="9" data-icon="images/office.jpg">Milk</option>
+                <option value="10" data-icon="images/yuna.jpg">Fruit</option>
+                <option value="11" data-icon="images/sample-1.jpg">Vegetables</option>
               </select>
               <label></label>
             </div>
             <div class="input-field col s12 center">
-              <select class="icons">
-                <option value="" disabled selected>Choose your option</option>
-                <option value="" data-icon="images/sample-1.jpg">example 1</option>
-                <option value="" data-icon="images/office.jpg">example 2</option>
-                <option value="" data-icon="images/yuna.jpg">example 3</option>
-                <option value="" data-icon="images/sample-1.jpg">example 1</option>
-                <option value="" data-icon="images/office.jpg">example 2</option>
-                <option value="" data-icon="images/yuna.jpg">example 3</option>
-                <option value="" data-icon="images/sample-1.jpg">example 1</option>
-                <option value="" data-icon="images/office.jpg">example 2</option>
-                <option value="" data-icon="images/yuna.jpg">example 3</option>
-                <option value="" data-icon="images/sample-1.jpg">example 1</option>
-              </select>
-              <label></label>
-            </div>
-            <div class="input-field col s12 center">
-              <select class="icons">
-                <option value="" disabled selected>Choose your option</option>
-                <option value="" data-icon="images/sample-1.jpg">example 1</option>
-                <option value="" data-icon="images/office.jpg">example 2</option>
-                <option value="" data-icon="images/yuna.jpg">example 3</option>
-                <option value="" data-icon="images/sample-1.jpg">example 1</option>
-                <option value="" data-icon="images/office.jpg">example 2</option>
-                <option value="" data-icon="images/yuna.jpg">example 3</option>
-                <option value="" data-icon="images/sample-1.jpg">example 1</option>
-                <option value="" data-icon="images/office.jpg">example 2</option>
-                <option value="" data-icon="images/yuna.jpg">example 3</option>
-                <option value="" data-icon="images/sample-1.jpg">example 1</option>
+              <select id=class="icons">
+                <option value="1" disabled selected>Choose your option</option>
+                <option value="2" data-icon="images/sample-1.jpg">Chicken</option>
+                <option value="3" data-icon="images/office.jpg">Beef</option>
+                <option value="4" data-icon="images/yuna.jpg">Bread</option>
+                <option value="5" data-icon="images/sample-1.jpg">Rice</option>
+                <option value="6" data-icon="images/office.jpg">Pasta</option>
+                <option value="7" data-icon="images/yuna.jpg">Cheese</option>
+                <option value="8" data-icon="images/sample-1.jpg">Eggs</option>
+                <option value="9" data-icon="images/office.jpg">Milk</option>
+                <option value="10" data-icon="images/yuna.jpg">Fruit</option>
+                <option value="11" data-icon="images/sample-1.jpg">Vegetables</option>
               </select>
               <label></label>
             </div>
@@ -133,11 +138,12 @@
           <div class="icon-block">
             <h2 class="center red-text accent-2"><i class="material-icons">video_label</i></h2>
             <h5 class="center">Recipe of the day</h5>
-
-            <div class="light" id="randomIngredients">
-            </div>
-            <div id="randomInstructions"></div>
-            <div id="randomImage"></div>
+            <br>
+            <h6 id='randomRecipe' class='center'></h6>
+            <br>
+            <!-- <div class="light" id="randomDescription"></div> -->
+            <div id="randomIngredients">Ingredients:</div>
+            <!-- <div id="randomImage"></div> -->
             <br><br>
             <!--Youtube Box-->
             <div class="video-container">
