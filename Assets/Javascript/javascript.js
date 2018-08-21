@@ -29,6 +29,8 @@ $(document).ready(function () {
             //Display random recipe on screen
             $('#randomRecipe').append(response.Title);
 
+
+
             //For loop to display ingredients from randomRecipe response
             for (let index = 0; index < response.Ingredients.length; index++) {
 
@@ -36,7 +38,7 @@ $(document).ready(function () {
                 $("#newList").append("<li>" + response.Ingredients[index].Name + "</li>");
             }
 
-            $('#randomInstructions').append(response.Instructions);
+            $('#randomIngredients').prepend("Ingredients:");
         });
     }
 
