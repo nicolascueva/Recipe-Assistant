@@ -13,77 +13,65 @@
 </head>
 
 <body>
+  <!-- Navbar-->
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a id="logo-container" href="#" class="brand-logo">ANZ<span>Solutions</span></a>
     </div>
   </nav>
 
+  <!-- Title Box-->
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center white-text text-lighten-2">Parallax Template</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-
-        <br><br>
-
+        <h1 class="header center text-white text-lighten-2 titleHead">Welcome to FLAVORTOWN</h1>
       </div>
     </div>
-    <div class="parallax"><img src="food1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax titleBackground"><img src="food1.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
-
+  <!-- Middle Row-->
   <div class="container">
     <div class="section">
-
-      <!--   Icon Section   -->
       <div class="row">
         <div class="col s12 m4">
+          <!--First Column-->
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h2 class="center red-text accent-2"><i class="material-icons">settings</i></h2>
             <h5 class="center">Filters</h5>
+            <!--Filters section-->
 
             <form action="" class="center light">
 
               <p class="center">
                 <label>
                   <input class="with-gap center" name="group1" type="radio" />
-                  <span id="vegan">Vegan</span>
+                  <span class="red-text text-accent-2" id="vegan">Vegan</span>
                 </label>
               </p>
               <p class="center">
                 <label class="center">
                   <input class="with-gap center" name="group1" type="radio" />
-                  <span id="vegetarian">Vegetarian</span>
+                  <span class="red-text text-accent-2" id="vegetarian">Vegetarian</span>
                 </label>
               </p>
               <p class="center">
                 <label>
                   <input class="with-gap center" name="group1" type="radio" />
-                  <span id="gluten-free">Glutin Free</span>
+                  <span class="red-text text-accent-2" id="glutenFree">Glutin Free</span>
                 </label>
               </p>
               <p class="center">
                 <label>
                   <input class="with-gap center" name="group1" type="radio" />
-                  <span id="dairy-free">Dairy Free</span>
+                  <span class="red-text text-accent-2" id="dairyFree">Dairy Free</span>
                 </label>
               </p>
-
             </form>
             <br>
-            <h5 class="center">Whats in your Fridge</h5>
+            <!-- Ingredient Selection-->
+            <h5 class="center">What's in your Fridge</h5>
             <div class="input-field col s12 center">
               <select class="icons">
                 <option value="" disabled selected>Choose your option</option>
@@ -134,47 +122,16 @@
             </div>
             <br><br>
             <div class=" row center">
-              <button id="submit" class="btn waves-effect waves-light" type="submit" name="action">Submit
+              <button id="submit" class="btn waves-effect waves-light red accent-2" type="submit" name="action">Submit
                 <i class="material-icons right"></i>
               </button>
             </div>
-            <!--<form action="#" class="center light">
-              <h5 class="center">What do you have in your fridge?
-              </h5>
-              <p class="center">
-                <label>
-                  <input type="checkbox" class="filled-in" />
-                  <span>Chicken</span>
-                </label>
-              </p>
-              <p class="center">
-                <label>
-                  <input type="checkbox" class="filled-in" />
-                  <span>Brocoli</span>
-                </label>
-              </p>
-              <p class="center">
-                <label>
-                  <input type="checkbox" class="filled-in" />
-                  <span>Onions</span>
-                </label>
-              </p>
-              <p class="center">
-                <label>
-                  <input type="checkbox" class="filled-in" />
-                  <span>Rice</span>
-                </label>
-              </p>
-              <button id="ingredientsSubmit" class="btn waves-effect waves-light" type="submit" name="action">Submit
-                <i class="material-icons right"></i>
-              </button>
-            </form>-->
           </div>
         </div>
-
+        <!-- Middle Column-->
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h2 class="center red-text accent-2"><i class="material-icons">video_label</i></h2>
             <h5 class="center">Recipe of the day</h5>
 
             <div class="light" id="randomIngredients">
@@ -182,26 +139,27 @@
             <div id="randomInstructions"></div>
             <div id="randomImage"></div>
             <br><br>
+            <!--Youtube Box-->
             <div class="video-container">
               <iframe width="560 " height="315 " src="https://www.youtube.com/embed/KgyMbCjPJ9g " frameborder="0
                             " allow="autoplay; encrypted-media " allowfullscreen></iframe>
             </div>
           </div>
         </div>
-
+        <!-- 5 Recipes to choose from-->
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h2 class="center red-text accent-2"><i class="material-icons">collections</i></h2>
             <ul class="center">
-              <li><a class="waves-effect waves-light btn-large ">Recipe 1</a></li>
+              <li><a class="waves-effect waves-light btn-large red accent-2">Recipe 1</a></li>
               <br>
-              <li><a class="waves-effect waves-light btn-large ">Recipe 2</a></li>
+              <li><a class="waves-effect waves-light btn-large red accent-2">Recipe 2</a></li>
               <br>
-              <li><a class="waves-effect waves-light btn-large ">Recipe 3</a></li>
+              <li><a class="waves-effect waves-light btn-large red accent-2">Recipe 3</a></li>
               <br>
-              <li><a class="waves-effect waves-light btn-large ">Recipe 4</a></li>
+              <li><a class="waves-effect waves-light btn-large red accent-2">Recipe 4</a></li>
               <br>
-              <li><a class="waves-effect waves-light btn-large ">Recipe 5</a></li>
+              <li><a class="waves-effect waves-light btn-large red accent-2">Recipe 5</a></li>
             </ul>
 
 
@@ -212,24 +170,23 @@
     </div>
   </div>
 
-
+  <!--2nd horizontal image-->
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+
         </div>
       </div>
     </div>
     <div class="parallax"><img src="food5.jpg" alt="Unsplashed background img 2"></div>
   </div>
-
+  <!--Row for chosen Recipe-->
   <div class="container">
     <div class="section">
-
       <div class="row">
         <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h3><i class="mdi-content-send red-text accent-2"></i></h3>
           <h4>Chosen Recipe</h4>
           <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc
             nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas
@@ -243,49 +200,40 @@
     </div>
   </div>
 
-
+  <!-- 3rd horizontal image-->
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+
         </div>
       </div>
     </div>
     <div class="parallax"><img src="food5.jpg" alt="Unsplashed background img 3"></div>
   </div>
-
-  <footer class="page-footer teal">
+  <!--Footer-->
+  <footer class="page-footer red accent-1">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full
-            time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
+          <h5 class="white-text brand-logo">ANZ<span>Solutions</span></h5>
+          <p class="grey-text text-lighten-4">We are a team of students working on this project like it's our full time job.
+            Your support as we continue development on this project is greatly appreciated.</p>
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+        <div class="col l3 s12 right">
+          <h5 class="white-text center">Connect</h5>
+          <ul class="center">
+            <li><a class="white-text" href="https://github.com/nicolascueva">https://github.com/nicolascueva</a></li>
+            <li><a class="white-text" href="https://github.com/AndyxWood">https://github.com/AndyxWood</a></li>
+            <li><a class="white-text" href="https://github.com/zachshult124">https://github.com/zachshult124</a></li>
+
           </ul>
         </div>
       </div>
     </div>
-    <div class="footer-copyright">
+    <div class="footer-copyright red accent-2">
       <div class="container">
         Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
       </div>
